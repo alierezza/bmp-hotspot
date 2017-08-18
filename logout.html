@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+  <meta charset="utf-8">
+	<title>PT. Berkat Megah Perkasa</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <link rel="stylesheet" href="css/default.css">
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/layout.css">
+	<script src="js/modernizr.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo-BMP.png" />
+  <script language="JavaScript">
+  function openLogin() {
+  	if (window.name != 'hotspot_logout') return true;
+  	open('$(link-login)', '_blank', '');
+  	window.close();
+  	return false;
+  }
+  </script>
+</head>
+<body>
+<center>
+   <div id="preloader">
+      <div id="status">
+         <img src="images/logo-BMP.png" height="64" width="64" alt="">
+      </div>
+   </div>
+
+
+   <section id="hero">
+
+	   <div class="row tengah">
+		   <div class="twelve columns">
+            <a href="#form" target="_blank" class="smoothscroll">
+			   <div class="hero-text center">
+               		<center><div class="logo-dnet animated fadeInLeft"><img src="images/logo-BMP.png"></div></center>
+		            <h1 class=" animated fadeInRight"><span>hotspot</span>login</h1>
+                <h4>you have just logged out</h4>
+			   </div>
+			</a>
+            <div class="buttons" align="center">
+                            <table border="0" cellpadding="4" cellspacing="1" width="100%">
+                              <tr align="center" valign="top">
+                                <td><strong>Username</strong><br>$(username)</td>
+                              </tr>
+                              <tr align="center" valign="top">
+                                <td><strong>Session Time</strong><br>$(uptime)</td>
+                              </tr>
+                              $(if session-timeout)
+                              <tr align="center" valign="top">
+                                <td><strong>Time Left</strong><br>$(session-timeout)</td>
+                              </tr>
+                              $(endif)
+                              <tr align="center" valign="top">
+                                <td><strong>bytes up/down</strong><br>$(bytes-in-nice) / $(bytes-out-nice)</td>
+                              </tr>
+                            </table>
+              <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+              <div class="buttons" align="center">
+              <button type="submit" class="animated shake" name="submit">Login</button>
+              </div>
+              </form>
+
+            </div>
+		   </div>
+
+	   </div>
+
+   </section> <!-- Homepage Hero end -->
+   <section id="line">
+     Support by <a href="http://asasta.co.id" target="_blank">ASASTA Consulting</a>
+   </section>
+   
+   <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/main.js"></script>
+</center>
+</body>
+
+</html>

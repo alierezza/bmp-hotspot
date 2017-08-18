@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <meta charset="utf-8">
+	<title>PT. Berkat Megah Perkasa</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <link rel="stylesheet" href="css/default.css">
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/layout.css">
+	<script src="js/modernizr.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo-BMP.png" />
+
+</head>
+
+<body>
+<center>
+   <div id="preloader">
+      <div id="status">
+         <img src="images/logo-BMP.png" height="64" width="64" alt="">
+      </div>
+   </div>
+
+
+   <section id="hero">
+
+	   <div class="row tengah">
+		   <div class="twelve columns">
+            <a href="#form" target="_blank" class="smoothscroll">
+			   <div class="hero-text center">
+               		<center><div class="logo-dnet animated fadeInLeft"><img src="images/logo-BMP.png"></div></center>
+		            <h1 class=" animated fadeInRight"><span>hotspot</span>login</h1>
+                <h4>Welcome to PT. Berkat Megah Perkasa </h4>
+			   </div>
+			</a>
+            <div class="buttons" align="center">
+              $(if chap-id)
+                <form name="sendin" action="$(link-login-only)" method="post">
+                  <input type="hidden" name="username" />
+                  <input type="hidden" name="password" />
+                  <input type="hidden" name="dst" value="$(link-orig)" />
+                  <input type="hidden" name="popup" value="true" />
+                </form>
+                <script language="JavaScript" src="md5.js"></script>
+                <script language="JavaScript">
+                  function doLogin() {
+              		document.sendin.username.value = document.login.username.value;
+              		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+              		document.sendin.submit();
+              		return false;
+              }
+              </script>
+              <SCRIPT language=JavaScript1.2>
+                var ns6=document.getElementById&&!document.all?1:0
+                var head="display:''"
+                var folder=''
+
+                function expandit(curobj){
+                folder=ns6?curobj.nextSibling.nextSibling.style:document.all[curobj.sourceIndex+1].style
+                if (folder.display=="none")
+                folder.display=""
+                else
+                folder.display="none"
+              }
+              </SCRIPT>
+              $(endif)
+            <form name="login" id="form" action="$(link-login-only)" method="post"
+              	    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+                        <input type="hidden" name="dst" value="$(link-orig)" />
+                        <input type="hidden" name="popup" value="true" />
+                        <input name="username" placeholder="Username" value="$(username)" type="text" class=" animated fadeInDown" id="username" size="40" autofocus/>
+                        <input name="password" placeholder="Password" value="" type="password" class=" animated fadeInUp" id="password" size="40" />
+                        <button type="submit" class="animated shake" name="submit">CONNECT</button>
+                      <br>$(if error)
+                      <div class="button error">$(error)</div>
+                      $(endif)
+            </form>
+
+            </div>
+		   </div>
+
+	   </div>
+
+   </section> <!-- Homepage Hero end -->
+   <section id="line">
+     Support by <a href="http://asasta.co.id" target="_blank">ASASTA Consulting</a>
+   </section>
+
+   <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+   <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+   <script src="js/waypoints.js"></script>
+   <script src="js/main.js"></script>
+</center>
+</body>
+
+</html>
